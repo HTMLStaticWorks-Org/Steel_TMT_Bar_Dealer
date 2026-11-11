@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home 2 (Engineering) — SteelForge | Precision Steel &amp; TMT Supply</title>
+  <meta name="description" content="SteelForge Engineering Home: Interactive IS 1786 TMT weight estimator, multi-brand steel portfolio, seismic grade comparison, and bulk dispatch services.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <script>
+    (function () {
+      var t = localStorage.getItem("steelforge_theme") || "dark";
+      var d = localStorage.getItem("steelforge_dir") || "ltr";
+      document.documentElement.setAttribute("data-theme", t === "light" ? "light" : "dark");
+      document.documentElement.setAttribute("dir", d === "rtl" ? "rtl" : "ltr");
+      document.documentElement.setAttribute("lang", d === "rtl" ? "ar" : "en");
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Cairo:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="page-home-2">
+
+  <!-- Sticky Navigation Bar -->
+  <header class="sf-navbar">
+    <div class="sf-container sf-nav-inner">
+      <a href="index.html" class="sf-brand" aria-label="SteelForge Home">
+        <svg class="sf-brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <rect x="2" y="2" width="44" height="44" rx="8" fill="#151719" stroke="#8C969F" stroke-opacity="0.45" stroke-width="1.5"/>
+          <path d="M11 11H37V16.5H27.5V31.5H37V37H11V31.5H20.5V16.5H11V11Z" fill="#F5F5F5"/>
+          <path d="M20.5 19.5L27.5 16.5V20.5L20.5 23.5V19.5Z" fill="#F07832"/>
+          <path d="M20.5 26.5L27.5 23.5V27.5L20.5 30.5V26.5Z" fill="#F07832"/>
+          <rect x="11" y="11" width="26" height="3" fill="#F07832"/>
+        </svg>
+        <span class="sf-brand-text">
+          <span class="sf-brand-name">STEELFORGE</span>
+          <span class="sf-brand-tag" data-i18n="brand_tag">STRENGTH YOU BUILD ON</span>
+        </span>
+      </a>
+
+      <nav class="desktop-nav-cluster" aria-label="Main Navigation">
+        <ul class="sf-nav-links">
+          <li class="sf-nav-item has-dropdown">
+            <a href="index.html" class="sf-nav-link active">
+              <span data-i18n="nav_home">Home</span>
+              <i data-lucide="chevron-down"></i>
+            </a>
+            <ul class="sf-dropdown-menu">
+              <li><a href="index.html" class="sf-dropdown-link" data-i18n="nav_home1">Home 1 — Industrial</a></li>
+              <li><a href="home-2.html" class="sf-dropdown-link" data-i18n="nav_home2">Home 2 — Engineering</a></li>
+            </ul>
+          </li>
+          <li class="sf-nav-item"><a href="about.html" class="sf-nav-link" data-i18n="nav_about">About</a></li>
+          <li class="sf-nav-item"><a href="services.html" class="sf-nav-link" data-i18n="nav_services">Services</a></li>
+          <li class="sf-nav-item has-dropdown">
+            <a href="products.html" class="sf-nav-link">
+              <span data-i18n="nav_products">Products</span>
+              <i data-lucide="chevron-down"></i>
+            </a>
+            <ul class="sf-dropdown-menu">
+              <li><a href="products.html" class="sf-dropdown-link" data-i18n="nav_all_products">All Steel Products</a></li>
+              <li><a href="products.html?category=TMT+Bars" class="sf-dropdown-link" data-i18n="nav_tmt_bars">TMT Reinforcement Bars</a></li>
+              <li><a href="products.html?category=Mild+Steel+Bars" class="sf-dropdown-link" data-i18n="nav_mild_steel">Mild Steel &amp; Round Bars</a></li>
+              <li><a href="products.html?category=Structural+Steel" class="sf-dropdown-link" data-i18n="nav_structural">Structural Steel &amp; Wire</a></li>
+            </ul>
+          </li>
+          <li class="sf-nav-item"><a href="index.html#brands" class="sf-nav-link" data-i18n="nav_brands">Brands</a></li>
+          <li class="sf-nav-item"><a href="price-enquiry.html" class="sf-nav-link" data-i18n="nav_enquiry">Price Enquiry</a></li>
+          <li class="sf-nav-item"><a href="contact.html" class="sf-nav-link" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+
+        <div class="sf-nav-actions">
+          <a href="price-enquiry.html" class="sf-btn sf-btn-primary sf-btn-sm" data-i18n="nav_cta">Get a Quote</a>
+          <button type="button" class="sf-icon-btn js-theme-toggle" aria-label="Toggle theme">
+            <span class="icon-sun"><i data-lucide="sun"></i></span>
+            <span class="icon-moon" style="display:none;"><i data-lucide="moon"></i></span>
+          </button>
+          <button type="button" class="sf-icon-btn sf-dir-btn js-dir-toggle" aria-label="Switch LTR / RTL">
+            <i data-lucide="languages"></i>
+            <span class="js-dir-label">RTL / AR</span>
+          </button>
+        </div>
+      </nav>
+
+      <button type="button" id="sf-hamburger-btn" class="mobile-nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="sf-mobile-drawer">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </header>
+
+  <div id="sf-mobile-drawer" class="sf-mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <ul class="sf-mobile-list">
+      <li><a href="index.html" class="sf-mobile-link"><span data-i18n="nav_home1">Home 1 — Industrial</span><i data-lucide="chevron-right" class="icon-directional"></i></a></li>
+      <li><a href="home-2.html" class="sf-mobile-link active"><span data-i18n="nav_home2">Home 2 — Engineering</span><i data-lucide="chevron-right" class="icon-directional"></i></a></li>
+      <li><a href="about.html" class="sf-mobile-link"><span data-i18n="nav_about">About</span><i data-lucide="chevron-right" class="icon-directional"></i></a></li>
+      <li><a href="services.html" class="sf-mobile-link"><span data-i18n="nav_services">Services</span><i data-lucide="chevron-right" class="icon-directional"></i></a></li>
+      <li><a href="products.html" class="sf-mobile-link"><span data-i18n="nav_products">Products</span><i data-lucide="chevron-right" class="icon-directional"></i></a></li>
+      <li><a href="index.html#brands" class="sf-mobile-link"><span data-i18n="nav_brands">Brands</span><i data-lucide="chevron-right" class="icon-directional"></i></a></li>
+      <li><a href="price-enquiry.html" class="sf-mobile-link"><span data-i18n="nav_enquiry">Price Enquiry</span><i data-lucide="chevron-right" class="icon-directional"></i></a></li>
+      <li><a href="contact.html" class="sf-mobile-link"><span data-i18n="nav_contact">Contact</span><i data-lucide="chevron-right" class="icon-directional"></i></a></li>
+    </ul>
+    <div class="sf-mobile-controls">
+      <a href="price-enquiry.html" class="sf-btn sf-btn-primary w-100" data-i18n="nav_cta">Get a Quote</a>
+      <div class="sf-mobile-toggle-row">
+        <button type="button" class="sf-icon-btn js-theme-toggle">
+          <span class="icon-sun"><i data-lucide="sun"></i></span>
+          <span class="icon-moon" style="display:none;"><i data-lucide="moon"></i></span>
+          <span class="theme-label">Light</span>
+        </button>
+        <button type="button" class="sf-icon-btn js-dir-toggle">
+          <i data-lucide="languages"></i>
+          <span class="js-dir-label">RTL / AR</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Home 2 Split Engineering Hero + Interactive TMT Weight Estimator -->
+    <section class="sf-home2-hero">
+      <img src="assets/images/about-warehouse.jpg" alt="SteelForge heavy steel stockyard bay" class="sf-hero-bg" style="opacity:0.26;">
+      <div class="sf-hero-overlay"></div>
+      <canvas id="sf-hero-canvas" class="sf-three-canvas" aria-hidden="true"></canvas>
+
+      <div class="sf-container sf-home2-grid">
+        <div>
+          <span class="sf-eyebrow js-hero-anim"><span class="sf-pulse-dot"></span><span>Engineering Edition &bull; IS 1786:2008 Compliant Stock</span></span>
+          <h1 class="sf-hero-title js-hero-anim" style="text-align:start;" data-i18n="h2_hero_title">
+            Precision Steel. Engineered Supply.
+          </h1>
+          <p class="sf-hero-subtitle js-hero-anim" style="text-align:start; margin-inline:0;" data-i18n="h2_hero_desc">
+            Multi-brand IS 1786 TMT reinforcement bars, structural sections, and cut-and-bend fabrication backed by batch test traceability.
+          </p>
+
+          <div class="d-flex flex-wrap gap-2 mb-4 js-hero-anim">
+            <span class="sf-spec-pill" style="background:rgba(240,120,50,0.16); color:#F5F5F5; border-color:rgba(240,120,50,0.5);">Fe 415 – Fe 600</span>
+            <span class="sf-spec-pill" style="background:rgba(255,255,255,0.08); color:#F5F5F5; border-color:rgba(140,150,159,0.4);">8 mm – 32 mm Stock</span>
+            <span class="sf-spec-pill" style="background:rgba(255,255,255,0.08); color:#F5F5F5; border-color:rgba(140,150,159,0.4);">MTC &amp; Batch Docs</span>
+          </div>
+
+          <div class="d-flex flex-wrap gap-3 js-hero-anim">
+            <a href="products.html" class="sf-btn sf-btn-primary sf-btn-lg">
+              <span>Explore Steel Range</span>
+              <i data-lucide="arrow-right" class="icon-directional"></i>
+            </a>
+            <a href="services.html" class="sf-btn sf-btn-outline-light sf-btn-lg">
+              <span>Yard &amp; Supply Services</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Live IS 1786 Bar Weight Estimator Widget -->
+        <div class="sf-estimator-card js-hero-anim">
+          <div class="d-flex align-items-center justify-content-between mb-3">
+            <div>
+              <span class="text-orange fw-bold" style="font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase;">IS 1786 Utility</span>
+              <h2 class="mb-0" style="font-size:1.5rem; color:#FFFFFF;">TMT Bar Weight Estimator</h2>
+            </div>
+            <i data-lucide="calculator" class="text-orange"></i>
+          </div>
+          <p style="font-size:0.86rem; color:#B8C0C7;" class="mb-3">
+            Estimate theoretical rebar tonnage using standard steel density (D² / 162 kg/m) for 12-metre bars.
+          </p>
+
+          <div class="row g-3">
+            <div class="col-6">
+              <label for="est-diameter" class="sf-form-label">Nominal Diameter</label>
+              <select id="est-diameter" class="sf-form-control">
+                <option value="8">8 mm (0.395 kg/m)</option>
+                <option value="10">10 mm (0.617 kg/m)</option>
+                <option value="12" selected>12 mm (0.888 kg/m)</option>
+                <option value="16">16 mm (1.580 kg/m)</option>
+                <option value="20">20 mm (2.469 kg/m)</option>
+                <option value="25">25 mm (3.858 kg/m)</option>
+                <option value="32">32 mm (6.317 kg/m)</option>
+              </select>
+            </div>
+            <div class="col-6">
+              <label for="est-bars" class="sf-form-label">Number of 12m Bars</label>
+              <input type="number" id="est-bars" class="sf-form-control" min="1" value="100">
+            </div>
+          </div>
+
+          <div class="sf-estimator-result">
+            <div>
+              <div style="font-size:0.78rem; color:#8C969F;">Estimated Weight</div>
+              <strong id="est-kg" style="font-size:1.25rem; color:#FFFFFF;">1066.7 kg</strong>
+            </div>
+            <div style="text-align:end;">
+              <div style="font-size:0.78rem; color:#8C969F;">Metric Tonnes</div>
+              <strong id="est-mt" style="font-size:1.25rem; color:#F07832;">1.067 MT</strong>
+            </div>
+          </div>
+
+          <a href="price-enquiry.html" id="est-enquire-btn" class="sf-btn sf-btn-primary w-100 mt-3">
+            <span>Request Quote for This Size</span>
+            <i data-lucide="arrow-right" class="icon-directional"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Continuous Multi-Brand Steel Marquee Ribbon -->
+    <div class="sf-container mt-4">
+      <div class="sf-marquee-wrap mb-0" aria-label="Steel brands supplied marquee">
+        <div class="sf-marquee-track">
+          <span class="sf-marquee-item"><span class="sf-pulse-dot"></span> Tata Tiscon</span>
+          <span class="sf-marquee-item"><span class="sf-pulse-dot"></span> JSW Neosteel</span>
+          <span class="sf-marquee-item"><span class="sf-pulse-dot"></span> Jindal Panther</span>
+          <span class="sf-marquee-item"><span class="sf-pulse-dot"></span> SAIL</span>
+          <span class="sf-marquee-item"><span class="sf-pulse-dot"></span> Kamdhenu</span>
+          <span class="sf-marquee-item"><span class="sf-pulse-dot"></span> Vizag Steel</span>
+          <span class="sf-marquee-item"><span class="sf-pulse-dot"></span> Tata Tiscon</span>
+          <span class="sf-marquee-item"><span class="sf-pulse-dot"></span> JSW Neosteel</span>
+          <span class="sf-marquee-item"><span class="sf-pulse-dot"></span> Jindal Panther</span>
+          <span class="sf-marquee-item"><span class="sf-pulse-dot"></span> SAIL</span>
+          <span class="sf-marquee-item"><span class="sf-pulse-dot"></span> Kamdhenu</span>
+          <span class="sf-marquee-item"><span class="sf-pulse-dot"></span> Vizag Steel</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2: Featured High-Demand Steel Grades -->
+    <section class="section-pad steel-grid-bg">
+      <div class="sf-container">
+        <div class="sf-section-header" data-aos="fade-up">
+          <span class="sf-eyebrow">Structural Engineering Selection</span>
+          <h2 class="sf-section-title">Featured Seismic &amp; High-Load Grades</h2>
+          <p class="sf-section-desc">Compare yield stress, ultimate tensile strength, and ductility metrics verified against IS 1786:2008.</p>
+          <div class="sf-divider"></div>
+        </div>
+
+        <div class="sf-grid-3">
+          <div class="sf-card" data-aos="fade-up">
+            <div class="sf-card-body">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="sf-grade-tag">Fe 500D</span>
+                <span class="sf-spec-pill">Min 16.0% Elongation</span>
+              </div>
+              <h3 class="sf-card-title">Seismic Residential &amp; Commercial</h3>
+              <p class="sf-card-text">500 N/mm² proof stress with 565 N/mm² UTS and 5.0% A<sub>gt</sub>. Tight S/P chemical controls absorb cyclic earthquake forces safely.</p>
+              <div class="sf-card-footer">
+                <span class="text-muted-sf" style="font-size:0.82rem;">8 mm – 32 mm</span>
+                <a href="products.html?grade=Fe+500D" class="sf-btn sf-btn-outline sf-btn-sm">Browse Fe 500D</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="sf-card" data-aos="fade-up" data-aos-delay="60">
+            <div class="sf-card-body">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="sf-grade-tag">Fe 550D</span>
+                <span class="sf-spec-pill">Min 14.5% Elongation</span>
+              </div>
+              <h3 class="sf-card-title">High-Rise &amp; Bridge Cores</h3>
+              <p class="sf-card-text">550 N/mm² proof stress paired with 600 N/mm² UTS and 5.0% A<sub>gt</sub>. Ideal for multi-storey towers, industrial mats, and flyovers.</p>
+              <div class="sf-card-footer">
+                <span class="text-muted-sf" style="font-size:0.82rem;">8 mm – 32 mm</span>
+                <a href="products.html?grade=Fe+550D" class="sf-btn sf-btn-outline sf-btn-sm">Browse Fe 550D</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="sf-card" data-aos="fade-up" data-aos-delay="120">
+            <div class="sf-card-body">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="sf-grade-tag">Fe 600</span>
+                <span class="sf-spec-pill">660 N/mm² Min UTS</span>
+              </div>
+              <h3 class="sf-card-title">Heavy Civil Infrastructure</h3>
+              <p class="sf-card-text">600 N/mm² proof stress reduces bar congestion in dense column junctions, metro piers, and heavy industrial foundations.</p>
+              <div class="sf-card-footer">
+                <span class="text-muted-sf" style="font-size:0.82rem;">12 mm – 32 mm</span>
+                <a href="products.html?grade=Fe+600" class="sf-btn sf-btn-outline sf-btn-sm">Browse Fe 600</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Yard & Processing Services Preview -->
+    <section class="section-pad surface-alt">
+      <div class="sf-container">
+        <div class="sf-section-header" data-aos="fade-up">
+          <span class="sf-eyebrow">Value-Added Operations</span>
+          <h2 class="sf-section-title">Supply &amp; Yard Capabilities</h2>
+          <p class="sf-section-desc">Built to align steel procurement with site casting calendars and structural inspection checkpoints.</p>
+          <div class="sf-divider"></div>
+        </div>
+
+        <div class="sf-grid-3">
+          <div class="sf-card" data-aos="fade-up">
+            <div class="sf-card-media">
+              <img src="assets/images/app-industrial.jpg" alt="Bulk industrial steel yard supply">
+            </div>
+            <div class="sf-card-body">
+              <h3 class="sf-card-title">Bulk Project Supply</h3>
+              <p class="sf-card-text">Full-trailer mixed diameter dispatches coordinated with project BBS schedules and phased site storage capacity.</p>
+              <div class="sf-card-footer">
+                <a href="services.html" class="sf-btn sf-btn-primary sf-btn-sm w-100">Explore All Services</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="sf-card" data-aos="fade-up" data-aos-delay="60">
+            <div class="sf-card-media">
+              <img src="assets/images/cat-stirrups.jpg" alt="Cut and bend stirrup fabrication">
+            </div>
+            <div class="sf-card-body">
+              <h3 class="sf-card-title">Cut &amp; Bend Stirrups</h3>
+              <p class="sf-card-text">Pre-bent column rings and beam stirrups fabricated to drawing dimensions, minimizing off-cut scrap on site.</p>
+              <div class="sf-card-footer">
+                <a href="services.html" class="sf-btn sf-btn-primary sf-btn-sm w-100">View Fabrication Specs</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="sf-card" data-aos="fade-up" data-aos-delay="120">
+            <div class="sf-card-media">
+              <img src="assets/images/hero-enquiry.jpg" alt="Scheduled logistics fleet dispatch">
+            </div>
+            <div class="sf-card-body">
+              <h3 class="sf-card-title">Weighbridge &amp; Fleet Dispatch</h3>
+              <p class="sf-card-text">Certified weighbridge slips, batch test certificates, and route-tracked vehicle arrivals for predictable site unloading.</p>
+              <div class="sf-card-footer">
+                <a href="about.html" class="sf-btn sf-btn-primary sf-btn-sm w-100">About Our Yard</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Sectors We Supply -->
+    <section class="section-pad">
+      <div class="sf-container">
+        <div class="sf-section-header" data-aos="fade-up">
+          <span class="sf-eyebrow">Project Applications</span>
+          <h2 class="sf-section-title">Built Across Every Civil Sector</h2>
+          <div class="sf-divider"></div>
+        </div>
+
+        <div class="sf-grid-4">
+          <div class="sf-card" data-aos="fade-up">
+            <div class="sf-card-media"><img src="assets/images/app-residential-2.jpg" alt="Residential construction"></div>
+            <div class="sf-card-body">
+              <h3 class="sf-card-title">Residential</h3>
+              <p class="sf-card-text mb-0">Villas, apartments, and housing layouts using Fe 500D &amp; Fe 415 bars.</p>
+            </div>
+          </div>
+          <div class="sf-card" data-aos="fade-up" data-aos-delay="50">
+            <div class="sf-card-media"><img src="assets/images/app-commercial.jpg" alt="Commercial complexes"></div>
+            <div class="sf-card-body">
+              <h3 class="sf-card-title">Commercial</h3>
+              <p class="sf-card-text mb-0">Office towers, malls, and steel-framed corporate complexes.</p>
+            </div>
+          </div>
+          <div class="sf-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="sf-card-media"><img src="assets/images/app-bridges.jpg" alt="Bridges and flyovers"></div>
+            <div class="sf-card-body">
+              <h3 class="sf-card-title">Bridges</h3>
+              <p class="sf-card-text mb-0">Fe 550D &amp; Fe 600 reinforcement for piers, girders, and abutments.</p>
+            </div>
+          </div>
+          <div class="sf-card" data-aos="fade-up" data-aos-delay="150">
+            <div class="sf-card-media"><img src="assets/images/app-highrise.jpg" alt="High-rise towers"></div>
+            <div class="sf-card-body">
+              <h3 class="sf-card-title">High-Rise</h3>
+              <p class="sf-card-text mb-0">Batch-certified reinforcement for shear walls and vertical cores.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Final CTA -->
+    <section class="sf-cta-banner">
+      <div class="sf-container" data-aos="fade-up">
+        <div class="sf-section-header mb-0">
+          <h2 class="sf-section-title" data-i18n="cta_title">Planning Your Next Construction Project?</h2>
+          <p class="sf-section-desc mb-4" style="color:#D7DCE1;" data-i18n="cta_desc">
+            Get the right steel products at competitive prices. Share your requirements and receive a quotation.
+          </p>
+          <div class="sf-hero-actions">
+            <a href="price-enquiry.html" class="sf-btn sf-btn-primary sf-btn-lg" data-i18n="cta_btn_quote">Request a Quote</a>
+            <a href="contact.html" class="sf-btn sf-btn-outline-light sf-btn-lg" data-i18n="cta_btn_contact">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="sf-footer">
+    <div class="sf-container">
+      <div class="sf-footer-grid">
+        <div>
+          <a href="index.html" class="sf-brand mb-3" style="color:#FFFFFF;">
+            <svg class="sf-brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <rect x="2" y="2" width="44" height="44" rx="8" fill="#24282C" stroke="#8C969F" stroke-opacity="0.45" stroke-width="1.5"/>
+              <path d="M11 11H37V16.5H27.5V31.5H37V37H11V31.5H20.5V16.5H11V11Z" fill="#F5F5F5"/>
+              <path d="M20.5 19.5L27.5 16.5V20.5L20.5 23.5V19.5Z" fill="#F07832"/>
+              <path d="M20.5 26.5L27.5 23.5V27.5L20.5 30.5V26.5Z" fill="#F07832"/>
+              <rect x="11" y="11" width="26" height="3" fill="#F07832"/>
+            </svg>
+            <span class="sf-brand-text">
+              <span class="sf-brand-name" style="color:#FFFFFF;">STEELFORGE</span>
+              <span class="sf-brand-tag" data-i18n="brand_tag">STRENGTH YOU BUILD ON</span>
+            </span>
+          </a>
+          <p style="font-size:0.9rem; color:#B8C0C7;" data-i18n="footer_desc">
+            Industrial steel and TMT reinforcement bar supplier serving retail builders, structural contractors, and bulk infrastructure projects with verified batch traceability.
+          </p>
+          <div class="sf-social-row">
+            <a href="contact.html" class="sf-social-btn" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="contact.html" class="sf-social-btn" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <a href="contact.html" class="sf-social-btn" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="contact.html" class="sf-social-btn" aria-label="Message"><i data-lucide="message-circle"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="sf-footer-heading" data-i18n="footer_quick">Quick Links</h4>
+          <ul class="sf-footer-links">
+            <li><a href="index.html" data-i18n="nav_home1">Home 1 — Industrial</a></li>
+            <li><a href="home-2.html" data-i18n="nav_home2">Home 2 — Engineering</a></li>
+            <li><a href="about.html" data-i18n="nav_about">About</a></li>
+            <li><a href="services.html" data-i18n="nav_services">Services</a></li>
+            <li><a href="products.html" data-i18n="nav_products">Products</a></li>
+            <li><a href="price-enquiry.html" data-i18n="nav_enquiry">Price Enquiry</a></li>
+            <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="sf-footer-heading" data-i18n="footer_cats">Product Categories</h4>
+          <ul class="sf-footer-links">
+            <li><a href="products.html?category=TMT+Bars">TMT Reinforcement Bars</a></li>
+            <li><a href="products.html?category=Mild+Steel+Bars">Mild Steel Bars</a></li>
+            <li><a href="products.html?category=Binding+Wire">Binding Wire</a></li>
+            <li><a href="products.html?category=Structural+Steel">Structural Steel</a></li>
+            <li><a href="products.html?category=Round+Bars">Round Bars</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="sf-footer-heading" data-i18n="footer_contact">Contact Information</h4>
+          <ul class="sf-footer-links">
+            <li class="d-flex gap-2 align-items-start"><i data-lucide="map-pin" class="text-orange mt-1"></i><span>Plot 48, Industrial Steel Yard, MIDC Logistics Zone (Sample Address)</span></li>
+            <li class="d-flex gap-2 align-items-center"><i data-lucide="phone" class="text-orange"></i><span>+91 98000 00000 (Sample)</span></li>
+            <li class="d-flex gap-2 align-items-center"><i data-lucide="mail" class="text-orange"></i><span>quotes@steelforge-demo.example</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sf-footer-bottom">
+        <span data-i18n="footer_copy">&copy; 2026 SteelForge Steel &amp; TMT Supply. Sample Demo Website.</span>
+        <span>IS 1786:2008 Reference Specifications &bull; Strength You Build On</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+

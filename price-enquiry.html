@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Price Enquiry — SteelForge | Request Steel &amp; TMT Quotation</title>
+  <meta name="description" content="Request a customized quotation for TMT bars, mild steel, structural beams, round bars, and binding wire from SteelForge.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <script>
+    (function () {
+      var t = localStorage.getItem("steelforge_theme") || "dark";
+      var d = localStorage.getItem("steelforge_dir") || "ltr";
+      document.documentElement.setAttribute("data-theme", t === "light" ? "light" : "dark");
+      document.documentElement.setAttribute("dir", d === "rtl" ? "rtl" : "ltr");
+      document.documentElement.setAttribute("lang", d === "rtl" ? "ar" : "en");
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Cairo:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="page-enquiry">
+
+  <!-- Sticky Navigation Bar -->
+  <header class="sf-navbar">
+    <div class="sf-container sf-nav-inner">
+      <a href="index.html" class="sf-brand" aria-label="SteelForge Home">
+        <svg class="sf-brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <rect x="2" y="2" width="44" height="44" rx="8" fill="#151719" stroke="#8C969F" stroke-opacity="0.45" stroke-width="1.5"/>
+          <path d="M11 11H37V16.5H27.5V31.5H37V37H11V31.5H20.5V16.5H11V11Z" fill="#F5F5F5"/>
+          <path d="M20.5 19.5L27.5 16.5V20.5L20.5 23.5V19.5Z" fill="#F07832"/>
+          <path d="M20.5 26.5L27.5 23.5V27.5L20.5 30.5V26.5Z" fill="#F07832"/>
+          <rect x="11" y="11" width="26" height="3" fill="#F07832"/>
+        </svg>
+        <span class="sf-brand-text">
+          <span class="sf-brand-name">STEELFORGE</span>
+          <span class="sf-brand-tag" data-i18n="brand_tag">STRENGTH YOU BUILD ON</span>
+        </span>
+      </a>
+
+      <nav class="desktop-nav-cluster" aria-label="Main Navigation">
+        <ul class="sf-nav-links">
+          <li class="sf-nav-item has-dropdown">
+            <a href="index.html" class="sf-nav-link">
+              <span data-i18n="nav_home">Home</span>
+              <i data-lucide="chevron-down"></i>
+            </a>
+            <ul class="sf-dropdown-menu">
+              <li><a href="index.html" class="sf-dropdown-link" data-i18n="nav_home1">Home 1 — Industrial</a></li>
+              <li><a href="home-2.html" class="sf-dropdown-link" data-i18n="nav_home2">Home 2 — Engineering</a></li>
+            </ul>
+          </li>
+          <li class="sf-nav-item"><a href="about.html" class="sf-nav-link" data-i18n="nav_about">About</a></li>
+          <li class="sf-nav-item"><a href="services.html" class="sf-nav-link" data-i18n="nav_services">Services</a></li>
+          <li class="sf-nav-item has-dropdown">
+            <a href="products.html" class="sf-nav-link">
+              <span data-i18n="nav_products">Products</span>
+              <i data-lucide="chevron-down"></i>
+            </a>
+            <ul class="sf-dropdown-menu">
+              <li><a href="products.html" class="sf-dropdown-link" data-i18n="nav_all_products">All Steel Products</a></li>
+              <li><a href="products.html?category=TMT+Bars" class="sf-dropdown-link" data-i18n="nav_tmt_bars">TMT Reinforcement Bars</a></li>
+              <li><a href="products.html?category=Mild+Steel+Bars" class="sf-dropdown-link" data-i18n="nav_mild_steel">Mild Steel &amp; Round Bars</a></li>
+              <li><a href="products.html?category=Structural+Steel" class="sf-dropdown-link" data-i18n="nav_structural">Structural Steel &amp; Wire</a></li>
+            </ul>
+          </li>
+          <li class="sf-nav-item"><a href="index.html#brands" class="sf-nav-link" data-i18n="nav_brands">Brands</a></li>
+          <li class="sf-nav-item"><a href="price-enquiry.html" class="sf-nav-link active" data-i18n="nav_enquiry">Price Enquiry</a></li>
+          <li class="sf-nav-item"><a href="contact.html" class="sf-nav-link" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+
+        <div class="sf-nav-actions">
+          <a href="price-enquiry.html" class="sf-btn sf-btn-primary sf-btn-sm" data-i18n="nav_cta">Get a Quote</a>
+          <button type="button" class="sf-icon-btn js-theme-toggle" aria-label="Toggle theme">
+            <span class="icon-sun"><i data-lucide="sun"></i></span>
+            <span class="icon-moon" style="display:none;"><i data-lucide="moon"></i></span>
+          </button>
+          <button type="button" class="sf-icon-btn sf-dir-btn js-dir-toggle" aria-label="Switch LTR / RTL">
+            <i data-lucide="languages"></i>
+            <span class="js-dir-label">RTL / AR</span>
+          </button>
+        </div>
+      </nav>
+
+      <button type="button" id="sf-hamburger-btn" class="mobile-nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="sf-mobile-drawer">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </header>
+
+  <div id="sf-mobile-drawer" class="sf-mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <ul class="sf-mobile-list">
+      <li><a href="index.html" class="sf-mobile-link"><span data-i18n="nav_home1">Home 1 — Industrial</span><i data-lucide="chevron-right" class="icon-directional"></i></a></li>
+      <li><a href="home-2.html" class="sf-mobile-link"><span data-i18n="nav_home2">Home 2 — Engineering</span><i data-lucide="chevron-right" class="icon-directional"></i></a></li>
+      <li><a href="about.html" class="sf-mobile-link"><span data-i18n="nav_about">About</span><i data-lucide="chevron-right" class="icon-directional"></i></a></li>
+      <li><a href="services.html" class="sf-mobile-link"><span data-i18n="nav_services">Services</span><i data-lucide="chevron-right" class="icon-directional"></i></a></li>
+      <li><a href="products.html" class="sf-mobile-link"><span data-i18n="nav_products">Products</span><i data-lucide="chevron-right" class="icon-directional"></i></a></li>
+      <li><a href="index.html#brands" class="sf-mobile-link"><span data-i18n="nav_brands">Brands</span><i data-lucide="chevron-right" class="icon-directional"></i></a></li>
+      <li><a href="price-enquiry.html" class="sf-mobile-link active"><span data-i18n="nav_enquiry">Price Enquiry</span><i data-lucide="chevron-right" class="icon-directional"></i></a></li>
+      <li><a href="contact.html" class="sf-mobile-link"><span data-i18n="nav_contact">Contact</span><i data-lucide="chevron-right" class="icon-directional"></i></a></li>
+    </ul>
+    <div class="sf-mobile-controls">
+      <a href="price-enquiry.html" class="sf-btn sf-btn-primary w-100" data-i18n="nav_cta">Get a Quote</a>
+      <div class="sf-mobile-toggle-row">
+        <button type="button" class="sf-icon-btn js-theme-toggle">
+          <span class="icon-sun"><i data-lucide="sun"></i></span>
+          <span class="icon-moon" style="display:none;"><i data-lucide="moon"></i></span>
+          <span class="theme-label">Light</span>
+        </button>
+        <button type="button" class="sf-icon-btn js-dir-toggle">
+          <i data-lucide="languages"></i>
+          <span class="js-dir-label">RTL / AR</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="sf-hero sf-hero-compact">
+      <img src="assets/images/IM 2/pexels-kerimeveyik-15866139.jpg" alt="SteelForge indoor cold-rolled steel coils and distribution bay" class="sf-hero-bg">
+      <div class="sf-hero-overlay"></div>
+      <div class="sf-container sf-hero-content">
+        <span class="sf-eyebrow js-hero-anim">Custom Quotation Desk</span>
+        <h1 class="sf-hero-title js-hero-anim" data-i18n="enq_hero_title">Get the Right Steel at the Right Price.</h1>
+        <p class="sf-hero-subtitle js-hero-anim mb-0" data-i18n="enq_hero_desc">
+          Tell us your steel requirements and receive a customized quotation.
+        </p>
+      </div>
+    </section>
+
+    <!-- Quotation Form & Bulk Info Split -->
+    <section class="section-pad steel-grid-bg">
+      <div class="sf-container">
+        <div class="row g-4 align-items-start">
+          <!-- Main Price Enquiry Form -->
+          <div class="col-lg-8" data-aos="fade-up">
+            <div class="sf-form-card">
+              <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+                <div>
+                  <h2 class="mb-1" style="font-size:1.75rem;">Steel Price Enquiry Form</h2>
+                  <p class="text-muted-sf mb-0" style="font-size:0.9rem;">
+                    Steel rates vary daily by brand, grade, diameter, tonnage, and site distance. Request Latest Price below.
+                  </p>
+                </div>
+                <span class="sf-demo-notice mt-0">
+                  <i data-lucide="flask-conical"></i>
+                  <span>Demo Interactive Form (Frontend Simulation)</span>
+                </span>
+              </div>
+
+              <form id="sf-enquiry-form" novalidate>
+                <!-- Customer Details -->
+                <h3 class="sf-form-section-title mt-4">1. Customer Details</h3>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="enq-name" class="sf-form-label">Full Name <span class="text-orange">*</span></label>
+                    <input type="text" id="enq-name" class="sf-form-control" placeholder="e.g., Arjun Mehta" required>
+                    <div class="sf-error-msg">Please enter your full name.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="enq-company" class="sf-form-label">Company Name</label>
+                    <input type="text" id="enq-company" class="sf-form-control" placeholder="e.g., Horizon Infra Pvt. Ltd. (Optional)">
+                  </div>
+                  <div class="col-md-4">
+                    <label for="enq-phone" class="sf-form-label">Phone Number <span class="text-orange">*</span></label>
+                    <input type="tel" id="enq-phone" class="sf-form-control" placeholder="+91 98XXX XXXXX" required>
+                    <div class="sf-error-msg">Enter a valid 8–18 digit phone number.</div>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="enq-email" class="sf-form-label">Email Address <span class="text-orange">*</span></label>
+                    <input type="email" id="enq-email" class="sf-form-control" placeholder="name@company.com" required>
+                    <div class="sf-error-msg">Enter a valid email address.</div>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="enq-city" class="sf-form-label">City / Location <span class="text-orange">*</span></label>
+                    <input type="text" id="enq-city" class="sf-form-control" placeholder="e.g., Pune, Maharashtra" required>
+                    <div class="sf-error-msg">Please enter your city or location.</div>
+                  </div>
+                </div>
+
+                <!-- Product Requirements -->
+                <h3 class="sf-form-section-title mt-4">2. Product Requirements</h3>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="enq-category" class="sf-form-label">Product Category <span class="text-orange">*</span></label>
+                    <select id="enq-category" class="sf-form-control" required>
+                      <option value="">Select Product Category</option>
+                      <option value="TMT Bars">TMT Reinforcement Bars</option>
+                      <option value="Mild Steel Bars">Mild Steel Bars</option>
+                      <option value="Round Bars">Round Bars</option>
+                      <option value="Binding Wire">Binding Wire</option>
+                      <option value="Structural Steel">Structural Steel</option>
+                      <option value="Other Steel Products">Steel Accessories / Other</option>
+                    </select>
+                    <div class="sf-error-msg">Select a product category.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="enq-brand" class="sf-form-label">Steel Brand <span class="text-orange">*</span></label>
+                    <select id="enq-brand" class="sf-form-control" required>
+                      <option value="">Select Brand Preference</option>
+                      <option value="Tata Tiscon">Tata Tiscon</option>
+                      <option value="JSW Neosteel">JSW Neosteel</option>
+                      <option value="Jindal Panther">Jindal Panther</option>
+                      <option value="SAIL">SAIL</option>
+                      <option value="Kamdhenu">Kamdhenu</option>
+                      <option value="Vizag Steel">Vizag Steel</option>
+                      <option value="Any Available Brand">Any Verified Mill Brand</option>
+                    </select>
+                    <div class="sf-error-msg">Select a steel brand or 'Any Verified Mill Brand'.</div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <label for="enq-grade" class="sf-form-label">Grade <span class="text-orange">*</span></label>
+                    <select id="enq-grade" class="sf-form-control" required>
+                      <option value="">Select Grade</option>
+                      <option value="Fe 415">Fe 415</option>
+                      <option value="Fe 500">Fe 500</option>
+                      <option value="Fe 500D">Fe 500D</option>
+                      <option value="Fe 550">Fe 550</option>
+                      <option value="Fe 550D">Fe 550D</option>
+                      <option value="Fe 600">Fe 600</option>
+                      <option value="IS 2062 E250">IS 2062 E250 (Structural / MS)</option>
+                      <option value="20 SWG / 18 SWG">20 SWG / 18 SWG (Binding Wire)</option>
+                    </select>
+                    <div class="sf-error-msg">Select a grade specification.</div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <label for="enq-size" class="sf-form-label">Diameter / Size <span class="text-orange">*</span></label>
+                    <select id="enq-size" class="sf-form-control" required>
+                      <option value="">Select Diameter / Size</option>
+                      <option value="8 mm">8 mm</option>
+                      <option value="10 mm">10 mm</option>
+                      <option value="12 mm">12 mm</option>
+                      <option value="16 mm">16 mm</option>
+                      <option value="20 mm">20 mm</option>
+                      <option value="25 mm">25 mm</option>
+                      <option value="32 mm">32 mm</option>
+                      <option value="Mixed Diameters (See BBS)">Mixed Diameters (See Notes / File)</option>
+                      <option value="0.9 mm (20G)">0.9 mm (20G Wire)</option>
+                      <option value="1.2 mm (18G)">1.2 mm (18G Wire)</option>
+                      <option value="ISMB 150–400">Structural Section (Specify in Notes)</option>
+                    </select>
+                    <div class="sf-error-msg">Select a diameter or mixed size option.</div>
+                  </div>
+
+                  <div class="col-md-2">
+                    <label for="enq-qty" class="sf-form-label">Quantity <span class="text-orange">*</span></label>
+                    <input type="number" id="enq-qty" class="sf-form-control" min="1" step="any" placeholder="10" required>
+                    <div class="sf-error-msg">Enter quantity &gt; 0.</div>
+                  </div>
+
+                  <div class="col-md-2">
+                    <label for="enq-unit" class="sf-form-label">Unit <span class="text-orange">*</span></label>
+                    <select id="enq-unit" class="sf-form-control" required>
+                      <option value="Tonnes">Tonnes</option>
+                      <option value="Kilograms">Kilograms</option>
+                      <option value="Pieces">Pieces</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Additional Information -->
+                <h3 class="sf-form-section-title mt-4">3. Additional Information</h3>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="enq-delivery-loc" class="sf-form-label">Required Delivery Location <span class="text-orange">*</span></label>
+                    <input type="text" id="enq-delivery-loc" class="sf-form-control" placeholder="Site address / Industrial zone" required>
+                    <div class="sf-error-msg">Enter delivery site location.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="enq-delivery-date" class="sf-form-label">Expected Delivery Date</label>
+                    <input type="date" id="enq-delivery-date" class="sf-form-control">
+                  </div>
+                  <div class="col-12">
+                    <label for="enq-notes" class="sf-form-label">Additional Requirements (Mixed Diameters / Unloading Crane / Test Docs)</label>
+                    <textarea id="enq-notes" rows="3" class="sf-form-control" placeholder="Specify diameter-wise breakup, Mill Test Certificate requirement, or vehicle access constraints..."></textarea>
+                  </div>
+                  <div class="col-12">
+                    <label for="enq-file" class="sf-form-label">Upload Requirement Document / BBS Sheet (Optional)</label>
+                    <input type="file" id="enq-file" class="sf-form-control" accept=".pdf,.xls,.xlsx,.csv,.jpg,.jpeg,.png">
+                    <div id="enq-file-name" class="text-muted-sf mt-1" style="font-size:0.8rem;">No file selected (PDF, XLSX, JPG, PNG up to 10 MB)</div>
+                  </div>
+                </div>
+
+                <div class="mt-4 d-flex flex-wrap align-items-center justify-content-between gap-3">
+                  <span class="text-muted-sf" style="font-size:0.83rem;">Demo mode: Form validates and simulates AJAX quotation submission locally.</span>
+                  <button type="submit" id="enq-submit-btn" class="sf-btn sf-btn-primary sf-btn-lg">
+                    <span data-i18n="enq_submit">Request Price Quotation</span>
+                    <i data-lucide="send"></i>
+                  </button>
+                </div>
+
+                <div id="enq-error" class="sf-alert sf-alert-error" role="alert">
+                  <i data-lucide="alert-triangle"></i>
+                  <div>Please review the highlighted fields above and ensure valid phone, email, and quantity details are entered.</div>
+                </div>
+
+                <div id="enq-success" class="sf-alert sf-alert-success" role="status">
+                  <i data-lucide="check-circle-2"></i>
+                  <div>
+                    <strong>Demo Quotation Request Logged!</strong> Reference ID: <strong id="enq-ref-code"></strong><br>
+                    Requirement: <span id="enq-summary-text"></span><br>
+                    <small>Note: This is a frontend demo submission. Connect to your CRM/email endpoint for live quotation dispatch.</small>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Bulk Order Info & Why Request a Quote Sidebar -->
+          <div class="col-lg-4 d-flex flex-column gap-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="sf-form-card">
+              <div class="sf-icon-box"><i data-lucide="truck"></i></div>
+              <h3 class="sf-card-title">Bulk Order Information</h3>
+              <p class="sf-card-text">
+                For orders exceeding 10 Metric Tonnes, SteelForge coordinates direct mill-gate or full-trailer stockyard dispatches with multi-diameter loading.
+              </p>
+              <ul class="sf-footer-links" style="color:var(--text-secondary);">
+                <li class="d-flex gap-2 align-items-center"><i data-lucide="check" class="text-orange"></i><span>Mixed 8–32 mm bundling in one truck</span></li>
+                <li class="d-flex gap-2 align-items-center"><i data-lucide="check" class="text-orange"></i><span>Batch &amp; Mill Test Certificates</span></li>
+                <li class="d-flex gap-2 align-items-center"><i data-lucide="check" class="text-orange"></i><span>Digital weighbridge weight tally</span></li>
+                <li class="d-flex gap-2 align-items-center"><i data-lucide="check" class="text-orange"></i><span>Phased site delivery scheduling</span></li>
+              </ul>
+            </div>
+
+            <div class="sf-form-card">
+              <div class="sf-icon-box"><i data-lucide="badge-check"></i></div>
+              <h3 class="sf-card-title">Why Request a Quote From Us?</h3>
+              <p class="sf-card-text mb-3">
+                Because steel pricing shifts daily with mill base rates, freight zones, and diameter surcharges, we prepare itemized quotes instead of displaying inaccurate static estimates.
+              </p>
+              <a href="products.html" class="sf-btn sf-btn-outline w-100">Browse Product Grades &amp; Sizes</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How Price Enquiry Works -->
+    <section class="section-pad surface-alt">
+      <div class="sf-container">
+        <div class="sf-section-header" data-aos="fade-up">
+          <span class="sf-eyebrow">Quotation Workflow</span>
+          <h2 class="sf-section-title">How Price Enquiry Works</h2>
+          <p class="sf-section-desc">Four straightforward steps from Bar Bending Schedule submission to site delivery.</p>
+          <div class="sf-divider"></div>
+        </div>
+
+        <div class="sf-grid-4">
+          <div class="sf-card" data-aos="fade-up">
+            <div class="sf-card-body">
+              <div class="sf-icon-box"><span class="fw-bold" style="font-size:1.2rem;">01</span></div>
+              <h3 class="sf-card-title">Share Requirement</h3>
+              <p class="sf-card-text mb-0">Select steel brand, IS 1786 grade, diameters, tonnage, and delivery city — or upload your BBS list.</p>
+            </div>
+          </div>
+
+          <div class="sf-card" data-aos="fade-up" data-aos-delay="50">
+            <div class="sf-card-body">
+              <div class="sf-icon-box"><span class="fw-bold" style="font-size:1.2rem;">02</span></div>
+              <h3 class="sf-card-title">Stock &amp; Rate Check</h3>
+              <p class="sf-card-text mb-0">Our desk verifies yard availability across requested diameters and calculates daily rate + transport.</p>
+            </div>
+          </div>
+
+          <div class="sf-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="sf-card-body">
+              <div class="sf-icon-box"><span class="fw-bold" style="font-size:1.2rem;">03</span></div>
+              <h3 class="sf-card-title">Itemized Quote</h3>
+              <p class="sf-card-text mb-0">Receive a clear proforma quote with per-tonne/kg breakdown, GST details, and estimated dispatch window.</p>
+            </div>
+          </div>
+
+          <div class="sf-card" data-aos="fade-up" data-aos-delay="150">
+            <div class="sf-card-body">
+              <div class="sf-icon-box"><span class="fw-bold" style="font-size:1.2rem;">04</span></div>
+              <h3 class="sf-card-title">Verified Dispatch</h3>
+              <p class="sf-card-text mb-0">Upon confirmation, steel is weighed, loaded with batch test sheets, and dispatched to your site.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Price Enquiry FAQs -->
+    <section class="section-pad">
+      <div class="sf-container">
+        <div class="sf-section-header" data-aos="fade-up">
+          <span class="sf-eyebrow">Quotation Support</span>
+          <h2 class="sf-section-title">Frequently Asked Questions</h2>
+          <div class="sf-divider"></div>
+        </div>
+
+        <div class="mx-auto" style="max-width:860px;" data-aos="fade-up">
+          <div class="sf-accordion-item open">
+            <button type="button" class="sf-accordion-btn">
+              <span>Why are exact prices not listed directly on the website?</span>
+              <i data-lucide="chevron-down" class="sf-acc-icon"></i>
+            </button>
+            <div class="sf-accordion-panel">
+              TMT and structural steel prices change frequently based on mill base announcements, diameter surcharges (e.g., 8 mm vs 16 mm), brand selection, total tonnage, and delivery distance. Submitting an enquiry ensures you get an accurate, current rate.
+            </div>
+          </div>
+
+          <div class="sf-accordion-item">
+            <button type="button" class="sf-accordion-btn">
+              <span>Can I request multiple diameters in a single quotation?</span>
+              <i data-lucide="chevron-down" class="sf-acc-icon"></i>
+            </button>
+            <div class="sf-accordion-panel">
+              Yes. Select "Mixed Diameters (See Notes / File)" in the Diameter dropdown and list your size-wise quantities in Additional Requirements or attach your Excel/PDF Bar Bending Schedule.
+            </div>
+          </div>
+
+          <div class="sf-accordion-item">
+            <button type="button" class="sf-accordion-btn">
+              <span>Do you provide Batch or Mill Test Certificates with orders?</span>
+              <i data-lucide="chevron-down" class="sf-acc-icon"></i>
+            </button>
+            <div class="sf-accordion-panel">
+              Yes, batch test certificates and Mill Test Certificates (MTC) issued for the supplied heat/lot are shared upon request for quality assurance and structural consultant sign-off.
+            </div>
+          </div>
+
+          <div class="sf-accordion-item">
+            <button type="button" class="sf-accordion-btn">
+              <span>What is the minimum order quantity for delivery?</span>
+              <i data-lucide="chevron-down" class="sf-acc-icon"></i>
+            </button>
+            <div class="sf-accordion-panel">
+              We support both retail bundle orders for individual home builders and full-trailer bulk orders for contractors. Freight charges depend on total load and unloading distance.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="sf-footer">
+    <div class="sf-container">
+      <div class="sf-footer-grid">
+        <div>
+          <a href="index.html" class="sf-brand mb-3" style="color:#FFFFFF;">
+            <svg class="sf-brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <rect x="2" y="2" width="44" height="44" rx="8" fill="#24282C" stroke="#8C969F" stroke-opacity="0.45" stroke-width="1.5"/>
+              <path d="M11 11H37V16.5H27.5V31.5H37V37H11V31.5H20.5V16.5H11V11Z" fill="#F5F5F5"/>
+              <path d="M20.5 19.5L27.5 16.5V20.5L20.5 23.5V19.5Z" fill="#F07832"/>
+              <path d="M20.5 26.5L27.5 23.5V27.5L20.5 30.5V26.5Z" fill="#F07832"/>
+              <rect x="11" y="11" width="26" height="3" fill="#F07832"/>
+            </svg>
+            <span class="sf-brand-text">
+              <span class="sf-brand-name" style="color:#FFFFFF;">STEELFORGE</span>
+              <span class="sf-brand-tag" data-i18n="brand_tag">STRENGTH YOU BUILD ON</span>
+            </span>
+          </a>
+          <p style="font-size:0.9rem; color:#B8C0C7;" data-i18n="footer_desc">
+            Industrial steel and TMT reinforcement bar supplier serving retail builders, structural contractors, and bulk infrastructure projects with verified batch traceability.
+          </p>
+          <div class="sf-social-row">
+            <a href="contact.html" class="sf-social-btn" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="contact.html" class="sf-social-btn" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <a href="contact.html" class="sf-social-btn" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="contact.html" class="sf-social-btn" aria-label="Message"><i data-lucide="message-circle"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="sf-footer-heading" data-i18n="footer_quick">Quick Links</h4>
+          <ul class="sf-footer-links">
+            <li><a href="index.html" data-i18n="nav_home1">Home 1 — Industrial</a></li>
+            <li><a href="home-2.html" data-i18n="nav_home2">Home 2 — Engineering</a></li>
+            <li><a href="about.html" data-i18n="nav_about">About</a></li>
+            <li><a href="services.html" data-i18n="nav_services">Services</a></li>
+            <li><a href="products.html" data-i18n="nav_products">Products</a></li>
+            <li><a href="index.html#brands" data-i18n="nav_brands">Brands</a></li>
+            <li><a href="price-enquiry.html" data-i18n="nav_enquiry">Price Enquiry</a></li>
+            <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="sf-footer-heading" data-i18n="footer_cats">Product Categories</h4>
+          <ul class="sf-footer-links">
+            <li><a href="products.html?category=TMT+Bars">TMT Reinforcement Bars</a></li>
+            <li><a href="products.html?category=Mild+Steel+Bars">Mild Steel Bars</a></li>
+            <li><a href="products.html?category=Binding+Wire">Binding Wire</a></li>
+            <li><a href="products.html?category=Structural+Steel">Structural Steel</a></li>
+            <li><a href="products.html?category=Round+Bars">Round Bars</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="sf-footer-heading" data-i18n="footer_contact">Contact Information</h4>
+          <ul class="sf-footer-links">
+            <li class="d-flex gap-2 align-items-start"><i data-lucide="map-pin" class="text-orange mt-1"></i><span>Plot 48, Industrial Steel Yard, MIDC Logistics Zone (Sample Address)</span></li>
+            <li class="d-flex gap-2 align-items-center"><i data-lucide="phone" class="text-orange"></i><span>+91 98000 00000 (Sample)</span></li>
+            <li class="d-flex gap-2 align-items-center"><i data-lucide="mail" class="text-orange"></i><span>quotes@steelforge-demo.example</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sf-footer-bottom">
+        <span data-i18n="footer_copy">&copy; 2026 SteelForge Steel &amp; TMT Supply. Sample Demo Website.</span>
+        <span>IS 1786:2008 Reference Specifications &bull; Strength You Build On</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/forms.js"></script>
+</body>
+</html>
+

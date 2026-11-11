@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <rect width="64" height="64" rx="12" fill="#151719"/>
+  <rect x="4" y="4" width="56" height="56" rx="10" stroke="#8C969F" stroke-opacity="0.35" stroke-width="1.5"/>
+  <!-- Industrial I-Beam & Rebar Rib Geometry -->
+  <path d="M14 14H50V22H37V42H50V50H14V42H27V22H14V14Z" fill="#F5F5F5"/>
+  <path d="M27 25L37 21V26L27 30V25Z" fill="#F07832"/>
+  <path d="M27 34L37 30V35L27 39V34Z" fill="#F07832"/>
+  <rect x="14" y="14" width="36" height="4" fill="#F07832"/>
+</svg>
+
