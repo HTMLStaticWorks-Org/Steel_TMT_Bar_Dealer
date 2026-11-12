@@ -67,20 +67,17 @@
               <li><a href="products.html?category=Structural+Steel" class="sf-dropdown-link" data-i18n="nav_structural">Structural Steel &amp; Wire</a></li>
             </ul>
           </li>
-          <li class="sf-nav-item"><a href="index.html#brands" class="sf-nav-link" data-i18n="nav_brands">Brands</a></li>
           <li class="sf-nav-item"><a href="price-enquiry.html" class="sf-nav-link" data-i18n="nav_enquiry">Price Enquiry</a></li>
           <li class="sf-nav-item"><a href="contact.html" class="sf-nav-link active" data-i18n="nav_contact">Contact</a></li>
         </ul>
 
         <div class="sf-nav-actions">
-          <a href="price-enquiry.html" class="sf-btn sf-btn-primary sf-btn-sm" data-i18n="nav_cta">Get a Quote</a>
           <button type="button" class="sf-icon-btn js-theme-toggle" aria-label="Toggle theme">
             <span class="icon-sun"><i data-lucide="sun"></i></span>
             <span class="icon-moon" style="display:none;"><i data-lucide="moon"></i></span>
           </button>
-          <button type="button" class="sf-icon-btn sf-dir-btn js-dir-toggle" aria-label="Switch LTR / RTL">
-            <i data-lucide="languages"></i>
-            <span class="js-dir-label">RTL / AR</span>
+          <button type="button" class="sf-icon-btn sf-dir-btn js-dir-toggle" aria-label="Switch LTR / RTL" title="Switch LTR / RTL">
+            <i data-lucide="arrow-left-right"></i>
           </button>
         </div>
       </nav>
@@ -98,21 +95,19 @@
       <li><a href="about.html" class="sf-mobile-link"><span data-i18n="nav_about">About</span><i data-lucide="chevron-right" class="icon-directional"></i></a></li>
       <li><a href="services.html" class="sf-mobile-link"><span data-i18n="nav_services">Services</span><i data-lucide="chevron-right" class="icon-directional"></i></a></li>
       <li><a href="products.html" class="sf-mobile-link"><span data-i18n="nav_products">Products</span><i data-lucide="chevron-right" class="icon-directional"></i></a></li>
-      <li><a href="index.html#brands" class="sf-mobile-link"><span data-i18n="nav_brands">Brands</span><i data-lucide="chevron-right" class="icon-directional"></i></a></li>
       <li><a href="price-enquiry.html" class="sf-mobile-link"><span data-i18n="nav_enquiry">Price Enquiry</span><i data-lucide="chevron-right" class="icon-directional"></i></a></li>
       <li><a href="contact.html" class="sf-mobile-link active"><span data-i18n="nav_contact">Contact</span><i data-lucide="chevron-right" class="icon-directional"></i></a></li>
     </ul>
     <div class="sf-mobile-controls">
-      <a href="price-enquiry.html" class="sf-btn sf-btn-primary w-100" data-i18n="nav_cta">Get a Quote</a>
       <div class="sf-mobile-toggle-row">
         <button type="button" class="sf-icon-btn js-theme-toggle">
           <span class="icon-sun"><i data-lucide="sun"></i></span>
           <span class="icon-moon" style="display:none;"><i data-lucide="moon"></i></span>
           <span class="theme-label">Light</span>
         </button>
-        <button type="button" class="sf-icon-btn js-dir-toggle">
-          <i data-lucide="languages"></i>
-          <span class="js-dir-label">RTL / AR</span>
+        <button type="button" class="sf-icon-btn js-dir-toggle" aria-label="Switch LTR / RTL">
+          <i data-lucide="arrow-left-right"></i>
+          <span class="js-dir-label">RTL</span>
         </button>
       </div>
     </div>
@@ -311,18 +306,23 @@
               </div>
             </div>
 
-            <!-- Google Maps Embed Placeholder -->
+            <!-- Interactive Google Maps Embed -->
             <div class="sf-map-frame flex-grow-1">
-              <div>
-                <div class="sf-icon-box mx-auto"><i data-lucide="map-pinned"></i></div>
-                <h3 style="color:#FFFFFF; font-size:1.45rem;" class="mb-2">Google Maps Embed Placeholder</h3>
-                <p style="color:#B8C0C7; font-size:0.9rem; max-width:340px;" class="mx-auto mb-3">
-                  Business Location: Plot 48, Industrial Steel Yard, MIDC Logistics Zone.<br>
-                  Replace this block with your verified Google Maps <code>&lt;iframe&gt;</code> embed URL.
-                </p>
-                <span class="sf-spec-pill" style="background:rgba(240,120,50,0.18); color:#F07832; border-color:rgba(240,120,50,0.45);">
-                  Weighbridge Gate &bull; Heavy Trailer Access
-                </span>
+              <iframe
+                title="SteelForge Industrial Stockyard Map"
+                src="https://maps.google.com/maps?q=MIDC%20Industrial%20Area%20Mumbai&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen></iframe>
+              <div class="sf-map-caption">
+                <div>
+                  <strong>SteelForge Central Stockyard</strong>
+                  <span>Plot 48, MIDC Logistics Zone &bull; Weighbridge Gate &amp; Heavy Trailer Access</span>
+                </div>
+                <a href="https://maps.google.com/?q=MIDC+Industrial+Area+Mumbai" target="_blank" rel="noopener noreferrer" class="sf-btn sf-btn-outline-light sf-btn-sm">
+                  <i data-lucide="external-link"></i>
+                  <span>Open Map</span>
+                </a>
               </div>
             </div>
           </div>

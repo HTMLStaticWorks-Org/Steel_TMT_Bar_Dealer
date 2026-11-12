@@ -86,9 +86,6 @@
             </ul>
           </li>
           <li class="sf-nav-item">
-            <a href="#brands" class="sf-nav-link" data-i18n="nav_brands">Brands</a>
-          </li>
-          <li class="sf-nav-item">
             <a href="price-enquiry.html" class="sf-nav-link" data-i18n="nav_enquiry">Price Enquiry</a>
           </li>
           <li class="sf-nav-item">
@@ -97,14 +94,12 @@
         </ul>
 
         <div class="sf-nav-actions">
-          <a href="price-enquiry.html" class="sf-btn sf-btn-primary sf-btn-sm" data-i18n="nav_cta">Get a Quote</a>
           <button type="button" class="sf-icon-btn js-theme-toggle" aria-label="Toggle theme">
             <span class="icon-sun"><i data-lucide="sun"></i></span>
             <span class="icon-moon" style="display:none;"><i data-lucide="moon"></i></span>
           </button>
-          <button type="button" class="sf-icon-btn sf-dir-btn js-dir-toggle" aria-label="Switch LTR / RTL">
-            <i data-lucide="languages"></i>
-            <span class="js-dir-label">RTL / AR</span>
+          <button type="button" class="sf-icon-btn sf-dir-btn js-dir-toggle" aria-label="Switch LTR / RTL" title="Switch LTR / RTL">
+            <i data-lucide="arrow-left-right"></i>
           </button>
         </div>
       </nav>
@@ -124,21 +119,19 @@
       <li><a href="about.html" class="sf-mobile-link"><span data-i18n="nav_about">About</span><i data-lucide="chevron-right" class="icon-directional"></i></a></li>
       <li><a href="services.html" class="sf-mobile-link"><span data-i18n="nav_services">Services</span><i data-lucide="chevron-right" class="icon-directional"></i></a></li>
       <li><a href="products.html" class="sf-mobile-link"><span data-i18n="nav_products">Products</span><i data-lucide="chevron-right" class="icon-directional"></i></a></li>
-      <li><a href="#brands" class="sf-mobile-link"><span data-i18n="nav_brands">Brands</span><i data-lucide="chevron-right" class="icon-directional"></i></a></li>
       <li><a href="price-enquiry.html" class="sf-mobile-link"><span data-i18n="nav_enquiry">Price Enquiry</span><i data-lucide="chevron-right" class="icon-directional"></i></a></li>
       <li><a href="contact.html" class="sf-mobile-link"><span data-i18n="nav_contact">Contact</span><i data-lucide="chevron-right" class="icon-directional"></i></a></li>
     </ul>
     <div class="sf-mobile-controls">
-      <a href="price-enquiry.html" class="sf-btn sf-btn-primary w-100" data-i18n="nav_cta">Get a Quote</a>
       <div class="sf-mobile-toggle-row">
         <button type="button" class="sf-icon-btn js-theme-toggle">
           <span class="icon-sun"><i data-lucide="sun"></i></span>
           <span class="icon-moon" style="display:none;"><i data-lucide="moon"></i></span>
           <span class="theme-label">Light</span>
         </button>
-        <button type="button" class="sf-icon-btn js-dir-toggle">
-          <i data-lucide="languages"></i>
-          <span class="js-dir-label">RTL / AR</span>
+        <button type="button" class="sf-icon-btn js-dir-toggle" aria-label="Switch LTR / RTL">
+          <i data-lucide="arrow-left-right"></i>
+          <span class="js-dir-label">RTL</span>
         </button>
       </div>
     </div>
@@ -858,53 +851,105 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="sf-testimonial-card">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <span class="sf-icon-box mb-0" style="width:38px; height:38px;"><i data-lucide="quote"></i></span>
+                  <div class="d-flex align-items-center gap-1 text-orange" aria-label="5 out of 5 rating">
+                    <i data-lucide="star" style="width:15px; height:15px; fill:currentColor;"></i>
+                    <i data-lucide="star" style="width:15px; height:15px; fill:currentColor;"></i>
+                    <i data-lucide="star" style="width:15px; height:15px; fill:currentColor;"></i>
+                    <i data-lucide="star" style="width:15px; height:15px; fill:currentColor;"></i>
+                    <i data-lucide="star" style="width:15px; height:15px; fill:currentColor;"></i>
+                  </div>
+                </div>
                 <p class="text-muted-sf mb-4">
                   "SteelForge coordinated our phased Fe 500D deliveries for a 12-storey residential tower right on schedule. Every consignment arrived with weighbridge slips and batch certificates."
                 </p>
-                <div>
-                  <strong class="d-block">Rajesh Deshmukh (Demo Client)</strong>
-                  <span class="text-orange" style="font-size:0.84rem;">Structural Contractor &bull; Residential Towers</span>
+                <div class="d-flex align-items-center gap-3 pt-2 border-top" style="border-color:var(--sf-border) !important;">
+                  <img src="assets/images/client-1.jpg" alt="Rajesh Deshmukh portrait" class="rounded-circle" style="width:46px; height:46px; flex-shrink:0; object-fit:cover; border:2px solid rgba(240,120,50,0.45);">
+                  <div>
+                    <strong class="d-block">Rajesh Deshmukh (Demo Client)</strong>
+                    <span class="text-orange" style="font-size:0.84rem;">Structural Contractor &bull; Residential Towers</span>
+                  </div>
                 </div>
               </div>
             </div>
 
             <div class="swiper-slide">
               <div class="sf-testimonial-card">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <span class="sf-icon-box mb-0" style="width:38px; height:38px;"><i data-lucide="quote"></i></span>
+                  <div class="d-flex align-items-center gap-1 text-orange" aria-label="5 out of 5 rating">
+                    <i data-lucide="star" style="width:15px; height:15px; fill:currentColor;"></i>
+                    <i data-lucide="star" style="width:15px; height:15px; fill:currentColor;"></i>
+                    <i data-lucide="star" style="width:15px; height:15px; fill:currentColor;"></i>
+                    <i data-lucide="star" style="width:15px; height:15px; fill:currentColor;"></i>
+                    <i data-lucide="star" style="width:15px; height:15px; fill:currentColor;"></i>
+                  </div>
+                </div>
                 <p class="text-muted-sf mb-4">
                   "Having multiple brands and all diameters from 8 mm to 32 mm available at one stockyard saved our procurement team days of follow-up during foundation casting."
                 </p>
-                <div>
-                  <strong class="d-block">Vikram Nair (Demo Client)</strong>
-                  <span class="text-orange" style="font-size:0.84rem;">Project Engineer &bull; Industrial Warehousing</span>
+                <div class="d-flex align-items-center gap-3 pt-2 border-top" style="border-color:var(--sf-border) !important;">
+                  <img src="assets/images/client-2.jpg" alt="Vikram Nair portrait" class="rounded-circle" style="width:46px; height:46px; flex-shrink:0; object-fit:cover; border:2px solid rgba(240,120,50,0.45);">
+                  <div>
+                    <strong class="d-block">Vikram Nair (Demo Client)</strong>
+                    <span class="text-orange" style="font-size:0.84rem;">Project Engineer &bull; Industrial Warehousing</span>
+                  </div>
                 </div>
               </div>
             </div>
 
             <div class="swiper-slide">
               <div class="sf-testimonial-card">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <span class="sf-icon-box mb-0" style="width:38px; height:38px;"><i data-lucide="quote"></i></span>
+                  <div class="d-flex align-items-center gap-1 text-orange" aria-label="5 out of 5 rating">
+                    <i data-lucide="star" style="width:15px; height:15px; fill:currentColor;"></i>
+                    <i data-lucide="star" style="width:15px; height:15px; fill:currentColor;"></i>
+                    <i data-lucide="star" style="width:15px; height:15px; fill:currentColor;"></i>
+                    <i data-lucide="star" style="width:15px; height:15px; fill:currentColor;"></i>
+                    <i data-lucide="star" style="width:15px; height:15px; fill:currentColor;"></i>
+                  </div>
+                </div>
                 <p class="text-muted-sf mb-4">
                   "Clear quotation breakdowns with zero hidden charges. Their dispatch team accommodated our last-minute binding wire and 12 mm stirrup bundle requirement."
                 </p>
-                <div>
-                  <strong class="d-block">Ananya Kulkarni (Demo Client)</strong>
-                  <span class="text-orange" style="font-size:0.84rem;">Procurement Lead &bull; Commercial Infra</span>
+                <div class="d-flex align-items-center gap-3 pt-2 border-top" style="border-color:var(--sf-border) !important;">
+                  <img src="assets/images/client-3.jpg" alt="Ananya Kulkarni portrait" class="rounded-circle" style="width:46px; height:46px; flex-shrink:0; object-fit:cover; border:2px solid rgba(240,120,50,0.45);">
+                  <div>
+                    <strong class="d-block">Ananya Kulkarni (Demo Client)</strong>
+                    <span class="text-orange" style="font-size:0.84rem;">Procurement Lead &bull; Commercial Infra</span>
+                  </div>
                 </div>
               </div>
             </div>
 
             <div class="swiper-slide">
               <div class="sf-testimonial-card">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <span class="sf-icon-box mb-0" style="width:38px; height:38px;"><i data-lucide="quote"></i></span>
+                  <div class="d-flex align-items-center gap-1 text-orange" aria-label="5 out of 5 rating">
+                    <i data-lucide="star" style="width:15px; height:15px; fill:currentColor;"></i>
+                    <i data-lucide="star" style="width:15px; height:15px; fill:currentColor;"></i>
+                    <i data-lucide="star" style="width:15px; height:15px; fill:currentColor;"></i>
+                    <i data-lucide="star" style="width:15px; height:15px; fill:currentColor;"></i>
+                    <i data-lucide="star" style="width:15px; height:15px; fill:currentColor;"></i>
+                  </div>
+                </div>
                 <p class="text-muted-sf mb-4">
                   "For our highway culvert and retaining wall package, SteelForge supplied Fe 550D bundles with complete mill test documentation for quality audit clearance."
                 </p>
-                <div>
-                  <strong class="d-block">Mohammed Farooq (Demo Client)</strong>
-                  <span class="text-orange" style="font-size:0.84rem;">Civil Infrastructure Partner</span>
+                <div class="d-flex align-items-center gap-3 pt-2 border-top" style="border-color:var(--sf-border) !important;">
+                  <img src="assets/images/client-4.jpg" alt="Mohammed Farooq portrait" class="rounded-circle" style="width:46px; height:46px; flex-shrink:0; object-fit:cover; border:2px solid rgba(240,120,50,0.45);">
+                  <div>
+                    <strong class="d-block">Mohammed Farooq (Demo Client)</strong>
+                    <span class="text-orange" style="font-size:0.84rem;">Civil Infrastructure Partner</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="swiper-pagination mt-4 position-relative"></div>
+          <div class="swiper-pagination mt-4 pt-2 position-relative"></div>
         </div>
       </div>
     </section>

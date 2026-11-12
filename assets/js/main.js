@@ -58,7 +58,7 @@
       }
     });
     document.querySelectorAll(".js-dir-label").forEach((el) => {
-      el.textContent = dict.dir_label || (lang === "ar" ? "LTR / EN" : "RTL / AR");
+      el.textContent = dict.dir_label || (lang === "ar" ? "LTR" : "RTL");
     });
   }
 
