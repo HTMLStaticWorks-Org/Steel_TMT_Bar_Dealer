@@ -315,6 +315,20 @@
       });
     });
 
+    // 8b. Date Picker Wrapper Click Trigger
+    document.querySelectorAll(".sf-date-wrap").forEach((wrap) => {
+      const input = wrap.querySelector("input[type='date']");
+      wrap.addEventListener("click", () => {
+        if (input && typeof input.showPicker === "function") {
+          try {
+            input.showPicker();
+          } catch (err) {
+            /* ignore unsupported */
+          }
+        }
+      });
+    });
+
     // 9. Home 2 Interactive IS 1786 TMT Weight Estimator
     const estDia = document.getElementById("est-diameter");
     const estBars = document.getElementById("est-bars");
